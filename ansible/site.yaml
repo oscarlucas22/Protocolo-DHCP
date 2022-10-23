@@ -28,7 +28,7 @@
   roles:
     - cliente
 
-# all
+# reboot
 - hosts: all
   become: true
   roles:
