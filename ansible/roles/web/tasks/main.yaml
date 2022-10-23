@@ -1,0 +1,29 @@
+- name: apache2 is installed
+  apt:
+    pkg: apache2
+    
+- name: copy template index 
+  template: 
+    src: index.j2
+    dest: /var/www/html/index.html
+    owner: www-data
+    group: www-data
+    mode: 0644
+
+- name: copy file to remote server
+  copy:
+    src: fich.html
+    dest: /var/www/html/fich.html
+    owner: www-data
+    group: www-data
+    mode: '0644'
+
+- name: copy configuration file and restart service
+  copy:
+    src: etc/apache2/ports.conf
+    dest: /etc/apache2/ports.conf
+    owner: root
+    group: root
+    mode: '0644'
+  notify: 
+    - restart apache2

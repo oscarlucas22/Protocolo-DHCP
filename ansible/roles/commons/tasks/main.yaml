@@ -1,0 +1,12 @@
+- name: "Update package"
+  apt:
+    update_cache: yes
+    upgrade: dist
+  become: yes
+
+#- name: "ssh key"
+#  authorized_key:
+#    user: vagrant
+#    state: present
+#    key: "{{ lookup('file', '~/.ssh/id_rsa.pub') }}"
+#  become: yes
