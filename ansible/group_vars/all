@@ -14,7 +14,7 @@ interfaz_cliente: ens3
 #dhcp
 red_muy_aislada: ens8
 nombre_reserva: cliente-web
-mac_reserva: 52:54:00:d6:86:10
+mac_reserva: 52:54:00:df:97:8f
 fixed_address: 10.0.0.2
 subnet_dhcp: 10.0.0.0 
 netmask_dhcp: 255.255.255.0
